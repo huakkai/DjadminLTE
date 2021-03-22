@@ -1,0 +1,12 @@
+{% extends 'adminlte/base.html' %}
+
+{% block title %}{{ site }}{% endblock %}
+
+{% block nav_sidebar %}
+    {% include 'example/index_sidebar.html' %}
+{% endblock %}
+
+{% block content %}
+    Just some example content - {{ site }}
+    <div>{{ docs }}</div>
+{% endblock %}
