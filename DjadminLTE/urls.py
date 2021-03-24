@@ -15,7 +15,6 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from example import views as example
 from django.views.generic.base import RedirectView
 
 from example.views import LoginView
@@ -23,6 +22,7 @@ from example.views import LoginView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('e/', include('example.urls')),
+    path('', LoginView.as_view()),
     path('login/', LoginView.as_view()),
     path('logout/', RedirectView.as_view(url='/login/')),
 ]
